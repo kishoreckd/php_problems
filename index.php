@@ -3,36 +3,30 @@
 
 function checking($number)
 {
+    $check = true;
+
     if ($number==1)
     {
-        echo "\"1\" is neither prime nor composite";
+        echo "$number is neither prime nor composite";
     }
-else
-{
-    for ($i=2;$i<$number;$i++){
-        if ($number %$i ==0)
+    else if($number>1){
+        for ($i=2;$i<$number;$i++)
         {
-            return 0;
+            if($number % $i == 0){
+                $check = false;
+            }
+
         }
-        else
-        {
-            return 1;
+        if($check){
+            echo "prime number";
+        }
+        else{
+            echo "not prime number";
         }
     }
 
 }
 
-
-
-}
-
-if(checking(3))
-{
-    echo "prime Number";
-}
-else
-{
-    echo "Composite Number";
-}
+checking(211)
 
 ?>
