@@ -3,7 +3,12 @@
 
 function checking($number)
 {
-
+    if ($number==1)
+    {
+        echo "\"1\" is neither prime nor composite";
+    }
+else
+{
     for ($i=2;$i<$number;$i++){
         if ($number %$i ==0)
         {
@@ -15,13 +20,15 @@ function checking($number)
         }
     }
 
+}
+
 
 
 }
 
-if(checking(7))
+if(checking(3))
 {
-    echo "prime";
+    echo "prime Number";
 }
 else
 {
