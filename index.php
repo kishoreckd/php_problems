@@ -3,12 +3,15 @@
 
 function checking($number)
 {
+    // adding a default variable considering to true to check
     $check = true;
 
+    // if the number is 1 it runs this if condition.
     if ($number==1)
     {
         echo "$number is neither prime nor composite";
     }
+    // if the number is greater than
     else if($number>1){
         for ($i=2;$i<$number;$i++)
         {
@@ -27,6 +30,5 @@ function checking($number)
 
 }
 
-checking(211)
-
+checking(2)
 ?>
